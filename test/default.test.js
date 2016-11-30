@@ -25,6 +25,7 @@ describe('slay-config (simple)', function () {
   it('Custom transport (multiple transports)', function (done) {
     var app = new slay.App(root);
     app.start({
+      http: 0,
       logger: {
         transports: [
           new (winston.transports.Console)(),
@@ -41,7 +42,7 @@ describe('slay-config (simple)', function () {
       assume(app.log.transports.file.dirname).equals(logDir);
 
       var filePath = app.log.transports.file.dirname + path.sep + app.log.transports.file.filename;
-      //Check if the file exists
+      // Check if the file exists
       fs.stat(filePath, function (statErr, stats) {
         assume(statErr).is.not.an('error');
         assume(stats).is.an('object');
