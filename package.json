@@ -1,0 +1,36 @@
+{
+  "name": "slay-log",
+  "version": "2.1.0",
+  "description": "Standard, sane defaults for logging in slay apps.",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:godaddy/slay-log.git"
+  },
+  "keywords": [
+    "slay",
+    "logging",
+    "slay-log",
+    "slay-logging"
+  ],
+  "author": "GoDaddy.com Operating Company, LLC",
+  "contributors": [
+    "Charlie Robbins <crobbins@godaddy.com>",
+    "Fady Matar <fmatar@godaddy.com>"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "assume": "^1.4.0",
+    "gulp": "^3.9.0",
+    "gulp-test-style-guide": "^3.0.2",
+    "mkdirp": "^0.5.1",
+    "slay": "^0.5.0",
+    "winston": "^2.1.1"
+  },
+  "dependencies": {
+    "diagnostics": "^1.0.1",
+    "lodash.merge": "^3.3.2"
+  }
+}
