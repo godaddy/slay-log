@@ -1,4 +1,6 @@
 /* eslint no-process-env: 0 */
+/* eslint max-nested-callbacks: 0 */
+/* eslint no-invalid-this: 0 */
 
 'use strict';
 
@@ -12,6 +14,7 @@ var fs      = require('fs'),
 var root = path.join(__dirname, 'sample-app');
 
 describe('slay-config (simple)', function () {
+  this.timeout(6E4);
   var logDir = root + path.sep + 'logs';
   var logFile = root + path.sep + 'logs' + path.sep + 'sample-app.log';
 
@@ -42,12 +45,14 @@ describe('slay-config (simple)', function () {
       assume(app.log.transports.file.dirname).equals(logDir);
 
       var filePath = app.log.transports.file.dirname + path.sep + app.log.transports.file.filename;
-      // Check if the file exists
-      fs.stat(filePath, function (statErr, stats) {
-        assume(statErr).is.not.an('error');
-        assume(stats).is.an('object');
-        app.close(done);
-      });
+      // Check if the file exists after we ensure it has time to flush to disk
+      setTimeout(() => {
+        fs.stat(filePath, function (statErr, stats) {
+          assume(statErr).is.not.an('error');
+          assume(stats).is.an('object');
+          app.close(done);
+        });
+      }, 5000);
     });
   });
 });
