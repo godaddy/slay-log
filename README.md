@@ -1,4 +1,8 @@
 # slay-log
+
+[![Build
+Status](https://travis-ci.org/godaddy/slay-log.svg?branch=master)](https://travis-ci.org/godaddy/slay-log)
+
 Attaches robust logging for GoDaddy to a slay application
 
 # General Information
