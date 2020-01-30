@@ -18,9 +18,10 @@ Configure the logger in your preboots. The steps to follow are as simple as this
 
 ## Example
 
-This preboot configuration sets the http port to 8080 and specifies two tansports for your logger. The file is located in preboot/config.js
+This preboot configuration sets the http port to 8080 and specifies two transports for your logger. The file is located in preboot/config.js
 
-```app.config
+```
+app.config
    .overrides(options)
    .use('argv')
    .use('env')
@@ -36,7 +37,7 @@ This preboot configuration sets the http port to 8080 and specifies two tansport
    .load(callback);
 ```
 
-Define your preboots in ```preboot/index.js```
+Define your preboots in `preboot/index.js`
 
 
 ```
