@@ -5,20 +5,21 @@
 'use strict';
 
 var fs      = require('fs'),
-    path    = require('path'),
-    assume  = require('assume'),
-    mkdirp  = require('mkdirp'),
-    slay    = require('slay'),
-    winston = require('winston');
+  path    = require('path'),
+  assume  = require('assume'),
+  mkdirp  = require('mkdirp'),
+  slay    = require('slay'),
+  winston = require('winston');
 
 var root = path.join(__dirname, 'sample-app');
 
 describe('slay-config (simple)', function () {
-  this.timeout(6E4);
+  this.timeout(6e4);
   var logDir = root + path.sep + 'logs';
   var logFile = root + path.sep + 'logs' + path.sep + 'sample-app.log';
 
   before(function (done) {
+    process.env.NODE_ENV = 'test';
     mkdirp(logDir, function (err) {
       assume(err).is.not.an('error');
       done();
