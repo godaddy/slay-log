@@ -1,6 +1,6 @@
 {
   "name": "slay-log",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Standard, sane defaults for logging in slay apps.",
   "scripts": {
     "pretest": "npm run lint",
@@ -8,7 +8,9 @@
     "lint": "npm run eslint",
     "test": "nyc mocha --reporter spec test/*test.js"
   },
-  "files": ["index.js"],
+  "files": [
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:godaddy/slay-log.git"
