@@ -6,8 +6,9 @@
     "pretest": "npm run lint",
     "eslint": "eslint --fix index.js test/*test.js",
     "lint": "npm run eslint",
-    "test": "istanbul cover _mocha -- --reporter spec test/*test.js"
+    "test": "nyc mocha --reporter spec test/*test.js"
   },
+  "files": ["index.js"],
   "repository": {
     "type": "git",
     "url": "git@github.com:godaddy/slay-log.git"
@@ -26,13 +27,13 @@
   "license": "MIT",
   "devDependencies": {
     "assume": "^1.4.0",
-    "eslint": "^5.16.0",
-    "eslint-config-godaddy": "^3.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-godaddy": "^4.0.0",
     "eslint-plugin-json": "^1.4.0",
     "eslint-plugin-mocha": "^5.3.0",
-    "istanbul": "~0.4.5",
-    "mkdirp": "^0.5.1",
-    "mocha": "^6.1.4",
+    "mkdirp": "^0.5.3",
+    "mocha": "^7.1.1",
+    "nyc": "^15.0.0",
     "slay": "^1.0.0",
     "winston": "^2.1.1"
   },
