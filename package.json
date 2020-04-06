@@ -1,6 +1,6 @@
 {
   "name": "slay-log",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "Standard, sane defaults for logging in slay apps.",
   "scripts": {
     "pretest": "npm run lint",
