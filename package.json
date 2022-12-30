@@ -34,7 +34,7 @@
     "eslint-plugin-json": "^1.4.0",
     "eslint-plugin-mocha": "^5.3.0",
     "mkdirp": "^0.5.3",
-    "mocha": "^7.1.1",
+    "mocha": "^10.2.0",
     "nyc": "^15.0.0",
     "slay": "^1.0.0",
     "winston": "^2.1.1"
